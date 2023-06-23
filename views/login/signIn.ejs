@@ -1,0 +1,31 @@
+<!-- sign in page for user  -->
+
+<div id="outer-container">
+    <div id="login-box">
+        <h2>Log In</h2>
+
+        <!-- form for getting information  -->
+        <form action="/users/create-session" method="POST">
+            <p>Email :</p>
+            <input type="email" name="email" id="email" required>
+            <hr>
+            <p>Password :</p>
+            <input type="password" name="password" id="password" required>
+            <hr>
+
+            <!-- link for resetting password  -->
+            <p>
+                <a href="/users/ask-email">forgot password?</a>
+            </p>
+            <button type="submit"><b>LogIn</b></button>
+        </form>
+        <hr>
+
+        <!-- google authentication  -->
+        <p id="google-login">
+            <a href="/users/auth/google">
+                <img src="https://sprintupsc.com/static/assets/css/goog.png" alt="SIGN IN WITH GOOGLE">
+            </a>
+        </p>
+    </div>
+</div>

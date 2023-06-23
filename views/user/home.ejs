@@ -1,0 +1,80 @@
+<!-- If user is signed in then show data otherwise, tell user to sign in -->
+<% if(!locals.user) { %>
+
+    <p id="oops">OOPS! <p id="oops-text">Looks like you are not signed in..</p></p>
+    <img src="" alt="">
+
+<% }else{ %>
+
+<div id="outer1-container">
+    <div id="left-container">
+
+        <!-- form for entering question and options  -->
+        <form action="/questions/create" method="POST">
+            <h3 class="text-underline circle-box-green">QUESTION :</h3>
+            <input name="question_text" type="text" placeholder="Type question..." required>
+            <br><br>
+
+            <!-- add unlimited number of options to the question  -->
+            <input type="text" id="option-text" placeholder="Enter option here...">
+            <input id="add-option" value="ADD OPTION" readonly>
+
+            <!-- showing the entered options to the user  -->
+            <hr>
+                <h3 class="text-underline circle-box-green">OPTIONS :</h3>
+            <ol id="options">
+    
+            </ol>
+            <hr>
+            <input type="submit" value="SUBMIT QUESTION">
+        </form>
+    </div>
+
+    <!-- showing all the questions she has entered till now  -->
+    <div id="questions-list">
+        <h3 class="text-underline circle-box-green">QUESTIONS LIST :</h3>
+        <ol>
+            <% for(q of questions_list) { %>
+                <li>
+                <div class="card">
+                <h4>
+
+                    <!-- showing questions  -->
+                    QUES: <%= q.title %>
+                    <a href="/questions/delete/<%= q._id %>" class="delete-button">
+                        <img src="https://icon-library.com/images/delete-button-icon/delete-button-icon-3.jpg" alt="DELETE">
+                    </a>
+                </h4>
+
+                <!-- showing its options  -->
+                <h5>OPTIONS :</h5>
+                <ol>
+                    <% for(op of q.options) {%>
+                        <li>
+                            <p>
+                                <%= op.text %>
+                                <a href="/options/delete/<%= op._id %>" class="delete-button">
+                                    <img src="https://icon-library.com/images/delete-button-icon/delete-button-icon-3.jpg" alt="DELETE">
+                                </a>
+                            </p>
+                            <p>VOTES: <%= op.votes %></p>
+                            <!-- <p>LINK TO VOTE: <%= op.link_to_vote %></p> -->
+                        </li>
+                    <% } %>
+                </ol>
+                </div>
+                </li>
+                <br>
+            <% } %>
+        </ol>
+    </div>
+</div>
+
+<!-- button for generating the response from api  -->
+<div id="outer2-container">
+    <h3 class="text-underline circle-box-green">GENERATE API</h3>
+    <form action="/questions/generate_api">
+        <input type="submit" value="GENERATE">
+    </form>
+</div>
+<% } %>

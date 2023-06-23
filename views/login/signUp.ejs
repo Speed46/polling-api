@@ -1,0 +1,27 @@
+<!-- sign up page for user  -->
+
+<div id="outer-container">
+    <div id="login-box">
+        <h2>Sign Up here</h2>
+        <form action="/users/create" method="POST">
+            <p>Name :</p>
+            <input type="text" name="name" id="name" required>
+            <p>Email :</p>
+            <input type="email" name="email" id="email" required>
+            <p>Password :</p>
+            <input type="password" name="password" id="password" required>
+            <p>Confirm Password :</p>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+            <hr>
+            <button type="submit"><b>SignUp</b></button>
+        </form>
+        <hr>
+
+        <!-- google authentication  -->
+        <p id="google-login">
+            <a href="/users/auth/google">
+                <img src="https://lms.boddlelearning.com/images/google-signup-sso.png" alt="SIGN UP WITH GOOGLE">
+            </a>
+        </p>
+    </div>
+</div>

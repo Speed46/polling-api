@@ -1,0 +1,52 @@
+body {
+  color: black; }
+
+#outer1-container {
+  display: flex;
+  height: 85%; }
+  #outer1-container #left-container {
+    display: inline-block;
+    padding: 10px;
+    width: 40%;
+    overflow: auto; }
+  #outer1-container #questions-list {
+    display: inline-block;
+    padding: 10px;
+    width: 60%;
+    overflow: auto; }
+
+.card {
+  background-color: rgba(255, 255, 255, 0.906);
+}
+
+#outer2-container {
+  padding: 15px; }
+
+.delete-button {
+  width: 40px;
+  height: 40px; }
+  .delete-button img {
+    width: 48px;
+    height: 40px; }
+
+.circle-box-green {
+  background-color: rgba(182, 250, 182, 0.904);
+  padding: 6px;
+  border-radius: 10px; }
+
+.circle-box-grey {
+  background-color: rgba(131, 133, 131, 0.712);
+  padding: 6px;
+  border-radius: 10px; }
+
+.text-bold {
+  font-weight: 700; }
+
+.text-underline {
+  text-decoration: underline; }
+
+#oops {
+  font-size: 80px; }
+
+#oops-text {
+  font-size: 40px; }

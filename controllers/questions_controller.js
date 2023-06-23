@@ -20,7 +20,9 @@ module.exports.create= async function(req, res) {
             });
             op.option_no= c;
             op.votes= 0;
-            op.link_to_vote= `https://polling-system-68ar.onrender.com/options/${op._id}/add_vote`;
+            // op.link_to_vote= `https://polling-system-68ar.onrender.com/options/${op._id}/add_vote`;
+            op.link_to_vote= `https://polling-api-nlbo.onrender.com/options/${op._id}/add_vote`;
+
             op.save();
 
             options.push(op);

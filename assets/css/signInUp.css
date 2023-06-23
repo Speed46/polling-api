@@ -1,7 +1,9 @@
 body {
-  background: url("https://img.freepik.com/free-photo/questioning-concept-with-question-mark_23-2150408197.jpg?w=1380&t=st=1687252642~exp=1687253242~hmac=3aab33804595d0050e1a5deee267f51a342782c9e06dc80a36aa6e4f806dd840") no-repeat fixed right top;
+  background: url("https://tinyurl.com/yc6ewsyx") ;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  font-family: cursive;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
   display: flex;
   flex-direction: column;
